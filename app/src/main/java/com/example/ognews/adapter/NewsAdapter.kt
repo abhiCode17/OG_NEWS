@@ -42,7 +42,7 @@ class NewsAdapter(private val context: Context, private val newsList: List<Artic
 
         Glide.with(holder.itemView.context)
             .load(news.urlToImage)
-            .placeholder(R.drawable.ic_launcher_background)
+            .placeholder(R.drawable.ic_loading_img)
             .into(holder.newsImage)
 
 

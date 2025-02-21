@@ -12,4 +12,10 @@ interface NewsApiService {
         @Query("apiKey") apiKey: String = "c74b69247e684ce39db3c81c0624064e"
     ): Call<NewsResponse>
 
+//    @GET("top-headlines")
+//    fun fetchNewsByCategory(
+//        @Query("q") query: String,
+//        @Query("apiKey") apiKey: String = "c74b69247e684ce39db3c81c0624064e"
+//    ): Call<NewsResponse>
+
 }

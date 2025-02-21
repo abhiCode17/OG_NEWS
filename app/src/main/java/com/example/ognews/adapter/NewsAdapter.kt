@@ -15,7 +15,6 @@ import com.example.ognews.R
 
 class NewsAdapter(private val context: Context, private val newsList: List<Article>) : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
-    // new code
     private val bookmarkManager = BookmarkManager(context)
 
     class NewsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -46,10 +45,8 @@ class NewsAdapter(private val context: Context, private val newsList: List<Artic
             .into(holder.newsImage)
 
 
-        // new code
-
         holder.bind(news)
-        // Set Bookmark Button Click
+
         holder.bookmarkButton.setOnClickListener {
             if (bookmarkManager.getBookmarks().contains(news)) {
                 bookmarkManager.removeBookmark(news)

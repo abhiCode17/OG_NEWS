@@ -95,6 +95,7 @@ class HomeFragment: Fragment() {
     }
 
 
+
     private fun fetchNewsByCategory(category: String) {
         if (category == "Select Category") {
             fetchNewsByQuery("top-headlines") // Load homepage if no category selected
@@ -120,8 +121,6 @@ class HomeFragment: Fragment() {
             }
         })
     }
-
-
 
 
     private fun setUpSearchView() {
@@ -151,25 +150,4 @@ class HomeFragment: Fragment() {
             }
         }
     }
-
-
-//    private fun setUpSearchView() {
-//        searchView.setOnFocusChangeListener(object: SearchView.OnQueryTextListener {
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-//                if(!query.isNullOrEmpty()) {
-//                    fetchNewsByQuery(query)
-//                }
-//                return true
-//            }
-//
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                return false
-//            }
-//
-//        })
-//    }
-
-
-
-
 }

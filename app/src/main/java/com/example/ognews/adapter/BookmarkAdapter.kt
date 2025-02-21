@@ -29,14 +29,13 @@ class BookmarkAdapter(
         holder.newsTitle.text = article.title
         holder.newsDescription.text = article.description
 
-        // Load image from saved file if available
         if (!article.imagePath.isNullOrEmpty()) {
             Glide.with(context)
                 .load(File(article.imagePath))
                 .into(holder.newsImage)
         } else {
             Glide.with(context)
-                .load(article.urlToImage) // Load image from API if no saved image
+                .load(article.urlToImage)
                 .into(holder.newsImage)
         }
 

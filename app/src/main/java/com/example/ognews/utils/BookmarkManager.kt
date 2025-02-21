@@ -21,7 +21,7 @@ class BookmarkManager(context: Context) {
 
     fun removeBookmark(article: Article) {
         val bookmarks = getBookmarks().toMutableList()
-        bookmarks.removeIf { it.title == article.title } // Remove by title (or use unique ID)
+        bookmarks.removeIf { it.title == article.title }
         prefs.edit().putString("bookmarked_articles", gson.toJson(bookmarks)).apply()
     }
 
